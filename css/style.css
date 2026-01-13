@@ -1,0 +1,227 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bgcolor);
+    color: #c7ffb5;
+    /* min-height: 5000px; */
+}
+
+.navbar {
+    display: flex;
+    background-color: #ffffff;
+    padding: 1rem 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.navbar .navbar-nav a {
+    color: #000000;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 1rem;
+}
+
+.img_background {
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #ffffff;
+    /* transparan */
+    margin-top: 3rem;
+    padding: 3rem;
+    /* border-radius: rem; */
+    width: 60%;
+    height: 70%;
+    /* text-align: center; */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.panel .panel_body {
+    display: flex;
+    align-items: flex-start;
+    /* teks di atas gambar */
+    gap: 20px;
+
+}
+
+.img_panel {
+    flex: 1 1 13rem;
+}
+
+.img_panel img {
+    width: 90%;
+    height: 25rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text_panel {
+    max-width: 35rem;
+}
+
+.img_background .panel .text_panel .text_tag {
+    margin: 1.8rem auto;
+}
+
+.img_background .panel .text_panel .text_tag h4 {
+    font-weight: 400;
+}
+
+.img_background .panel .text_panel .text_tag h4,
+.img_background .panel .text_panel .text_tag h2 {
+    color: #000000;
+}
+
+.img_background .panel .text_panel .text_tag h2 {
+    font-size: 1.3rem;
+}
+
+.img_background .panel .footer_panel {
+    /* border-top: 1px solid #ddd; */
+    padding-top: 15px;
+    text-align: right;
+}
+
+
+
+
+@media(max-width: 1366px) {
+    html {
+        font-size: 100%;
+    }
+
+    .img_panel img {
+        height: 25rem;
+        width: 100%;
+    }
+
+    .img_background .panel .text_panel .text_tag h4 {
+        font-size: 0.6rem;
+    }
+
+    .img_background .panel .text_panel .text_tag h2 {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+        /* tetap horizontal */
+    }
+
+    .navbar .navbar-nav {
+        flex-direction: row;
+        /* menu tetap sejajar */
+        gap: 15px;
+    }
+
+    .navbar .navbar-nav a {
+        margin: 0.4rem;
+    }
+
+    /* 
+    .panel {
+        width: auto;
+    } */
+
+    .panel_body {
+        display: flex;
+        flex-direction: column;
+        /* ⬅️ stack vertikal */
+        align-items: stretch;
+        /* ⬅️ full width */
+    }
+
+
+
+    .text_panel .text_tag {
+        /* margin-bottom: 10rem; */
+
+    }
+
+    .img_panel {
+        width: 100%;
+        height: 2rem;
+        /* tinggi jelas */
+    }
+
+    .img_panel img {
+        height: 12rem;
+        width: 100%;
+    }
+
+
+
+    .img_background .panel .text_panel .text_tag h4 {
+        text-align: left;
+        font-size: 0.4rem;
+    }
+
+    .img_background .panel .text_panel .text_tag h2 {
+        text-align: left;
+        font-size: 0.6rem;
+    }
+
+    .img_background .panel .text_panel .text_tag {
+        margin: 0.7rem;
+    }
+
+    .footer_panel {
+        text-align: center;
+    }
+
+    .social {
+        justify-content: center;
+    }
+}
+
+
+/* Phone */
+@media(max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+
+}
